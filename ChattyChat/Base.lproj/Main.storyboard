@@ -481,6 +481,9 @@
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="editButtonPressed" destination="ePY-Pd-0f1" eventType="touchUpInside" id="Svo-I1-eAo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -590,7 +593,7 @@
         <image name="person.2" catalog="system" width="128" height="82"/>
         <image name="quote.bubble" catalog="system" width="128" height="110"/>
         <namedColor name="TableViewBackgroundColor">
-            <color red="0.94899999999999995" green="0.94899999999999995" blue="0.96899999999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

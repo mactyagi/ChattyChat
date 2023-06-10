@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import Gallery
+import ProgressHUD
 class EditProfileTableViewController: UITableViewController {
 
     //MARK: - IBOutlets
@@ -14,6 +15,8 @@ class EditProfileTableViewController: UITableViewController {
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     
+    //MARK: - Vars
+    var gallery: GalleryController!
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,12 @@ class EditProfileTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showUserInfo()
+    }
+    
+    //MARK: - IBAction
+    
+   @IBAction func editButtonPressed(){
+        showImageGallery()
     }
     
     //MARK: - updateUI
@@ -41,6 +50,17 @@ class EditProfileTableViewController: UITableViewController {
         userNameTextField.delegate = self
         userNameTextField.clearButtonMode = .whileEditing
     }
+    
+    
+    func showImageGallery(){
+        self.gallery = GalleryController()
+        self.gallery.delegate = self
+        Config.tabsToShow = [.imageTab, .cameraTab]
+        Config.Camera.imageLimit = 1
+        Config.initialTab = .imageTab
+        self.present(gallery, animated: true)
+    }
+    
 }
 
 
@@ -77,4 +97,36 @@ extension EditProfileTableViewController: UITextFieldDelegate{
         }
         return true
     }
+}
+
+
+extension EditProfileTableViewController: GalleryControllerDelegate{
+    func galleryController(_ controller: Gallery.GalleryController, didSelectImages images: [Gallery.Image]) {
+        if let image = images.first{
+            image.resolve { avatarImage in
+                //TODO: - upload image
+                if let image = avatarImage{
+                    self.avatarImageView.image = image
+                }else{
+                    ProgressHUD.showError("couldn't select image")
+                }
+                
+            }
+        }
+        controller.dismiss(animated: true)
+    }
+    
+    func galleryController(_ controller: Gallery.GalleryController, didSelectVideo video: Gallery.Video) {
+        controller.dismiss(animated: true)
+    }
+    
+    func galleryController(_ controller: Gallery.GalleryController, requestLightbox images: [Gallery.Image]) {
+        controller.dismiss(animated: true)
+    }
+    
+    func galleryControllerDidCancel(_ controller: Gallery.GalleryController) {
+        controller.dismiss(animated: true)
+    }
+    
+    
 }

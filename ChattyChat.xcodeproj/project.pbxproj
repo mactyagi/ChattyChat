@@ -21,6 +21,7 @@
 		3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */; };
 		32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */; };
 		32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */; };
+		32DC2E962A350F9B00BB255F /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E952A350F9B00BB255F /* FileStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListners.swift; sourceTree = "<group>"; };
 		32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		32DC2E952A350F9B00BB255F /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.release.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.release.xcconfig"; sourceTree = "<group>"; };
 		760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.debug.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3216604A2A34737D00F5BCFF /* FCollectionReference.swift */,
+				32DC2E952A350F9B00BB255F /* FileStorage.swift */,
 				3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */,
 			);
 			path = FirebaseHelper;
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DC2E962A350F9B00BB255F /* FileStorage.swift in Sources */,
 				3216604B2A34737D00F5BCFF /* FCollectionReference.swift in Sources */,
 				321660492A3471C700F5BCFF /* Constants.swift in Sources */,
 				3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */,

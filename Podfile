@@ -10,11 +10,12 @@ target 'ChattyChat' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
 # pod 'Firebase/Analytics'
 # pod 'Firebase/Messaging'
  pod 'FirebaseFirestoreSwift'
 
-# pod 'Gallery'
+ pod 'Gallery'
 # pod 'RealmSwift'
  pod 'ProgressHUD'
 # pod 'SKPhotoBrowser'
