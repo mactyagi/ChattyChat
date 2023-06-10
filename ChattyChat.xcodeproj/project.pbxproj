@@ -16,6 +16,11 @@
 		3216603D2A3440A000F5BCFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3216603B2A3440A000F5BCFF /* LaunchScreen.storyboard */; };
 		321660452A344EAF00F5BCFF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 321660442A344EAF00F5BCFF /* GoogleService-Info.plist */; };
 		321660472A346C6A00F5BCFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660462A346C6A00F5BCFF /* User.swift */; };
+		321660492A3471C700F5BCFF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660482A3471C700F5BCFF /* Constants.swift */; };
+		3216604B2A34737D00F5BCFF /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216604A2A34737D00F5BCFF /* FCollectionReference.swift */; };
+		3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */; };
+		32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */; };
+		32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		3216603E2A3440A000F5BCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		321660442A344EAF00F5BCFF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		321660462A346C6A00F5BCFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		321660482A3471C700F5BCFF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3216604A2A34737D00F5BCFF /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
+		3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListners.swift; sourceTree = "<group>"; };
+		32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.release.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.release.xcconfig"; sourceTree = "<group>"; };
 		760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.debug.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +88,11 @@
 				321660302A34409F00F5BCFF /* AppDelegate.swift */,
 				321660322A34409F00F5BCFF /* SceneDelegate.swift */,
 				321660342A34409F00F5BCFF /* LoginViewController.swift */,
-				321660462A346C6A00F5BCFF /* User.swift */,
+				32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */,
+				32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */,
+				32DC2E8F2A34964600BB255F /* Model */,
+				3216604C2A3474E000F5BCFF /* FirebaseHelper */,
+				32DC2E902A34965000BB255F /* Helper */,
 				321660362A34409F00F5BCFF /* Main.storyboard */,
 				321660392A3440A000F5BCFF /* Assets.xcassets */,
 				3216603B2A3440A000F5BCFF /* LaunchScreen.storyboard */,
@@ -86,6 +100,31 @@
 				321660442A344EAF00F5BCFF /* GoogleService-Info.plist */,
 			);
 			path = ChattyChat;
+			sourceTree = "<group>";
+		};
+		3216604C2A3474E000F5BCFF /* FirebaseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3216604A2A34737D00F5BCFF /* FCollectionReference.swift */,
+				3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */,
+			);
+			path = FirebaseHelper;
+			sourceTree = "<group>";
+		};
+		32DC2E8F2A34964600BB255F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				321660462A346C6A00F5BCFF /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32DC2E902A34965000BB255F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				321660482A3471C700F5BCFF /* Constants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		873E09A5A23871DEC8E99060 /* Pods */ = {
@@ -213,7 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3216604B2A34737D00F5BCFF /* FCollectionReference.swift in Sources */,
+				321660492A3471C700F5BCFF /* Constants.swift in Sources */,
+				3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */,
 				321660472A346C6A00F5BCFF /* User.swift in Sources */,
+				32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */,
+				32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */,
 				321660352A34409F00F5BCFF /* LoginViewController.swift in Sources */,
 				321660312A34409F00F5BCFF /* AppDelegate.swift in Sources */,
 				321660332A34409F00F5BCFF /* SceneDelegate.swift in Sources */,
