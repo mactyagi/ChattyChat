@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186058817946E3FD8794C7A5 /* Pods_ChattyChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */; };
 		321660312A34409F00F5BCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660302A34409F00F5BCFF /* AppDelegate.swift */; };
 		321660332A34409F00F5BCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660322A34409F00F5BCFF /* SceneDelegate.swift */; };
 		321660352A34409F00F5BCFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660342A34409F00F5BCFF /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		321660392A3440A000F5BCFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3216603C2A3440A000F5BCFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3216603E2A3440A000F5BCFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.release.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.release.xcconfig"; sourceTree = "<group>"; };
+		760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.debug.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186058817946E3FD8794C7A5 /* Pods_ChattyChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B4A8C82986169308BC76837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		321660242A34409F00F5BCFF = {
 			isa = PBXGroup;
 			children = (
 				3216602F2A34409F00F5BCFF /* ChattyChat */,
 				3216602E2A34409F00F5BCFF /* Products */,
+				873E09A5A23871DEC8E99060 /* Pods */,
+				0B4A8C82986169308BC76837 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = ChattyChat;
 			sourceTree = "<group>";
 		};
+		873E09A5A23871DEC8E99060 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */,
+				5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 321660412A3440A000F5BCFF /* Build configuration list for PBXNativeTarget "ChattyChat" */;
 			buildPhases = (
+				009745C588D543A5C564FF8A /* [CP] Check Pods Manifest.lock */,
 				321660292A34409F00F5BCFF /* Sources */,
 				3216602A2A34409F00F5BCFF /* Frameworks */,
 				3216602B2A34409F00F5BCFF /* Resources */,
+				5B8F4938F6DA35A051E1840B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		009745C588D543A5C564FF8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChattyChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B8F4938F6DA35A051E1840B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChattyChat/Pods-ChattyChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChattyChat/Pods-ChattyChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChattyChat/Pods-ChattyChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		321660292A34409F00F5BCFF /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		321660422A3440A000F5BCFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		321660432A3440A000F5BCFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
