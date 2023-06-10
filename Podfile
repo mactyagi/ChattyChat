@@ -12,7 +12,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 # pod 'Firebase/Analytics'
 # pod 'Firebase/Messaging'
-# pod 'FirebaseFirestoreSwift'
+ pod 'FirebaseFirestoreSwift'
 
 # pod 'Gallery'
 # pod 'RealmSwift'
