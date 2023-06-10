@@ -9,7 +9,7 @@ target 'ChattyChat' do
 
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
-# pod 'Firebase/Firestore'
+pod 'Firebase/Firestore'
 # pod 'Firebase/Analytics'
 # pod 'Firebase/Messaging'
 # pod 'FirebaseFirestoreSwift'
