@@ -8,7 +8,7 @@ target 'ChattyChat' do
   # Pods for ChattyChat
 
 pod 'Firebase/Core'
-# pod 'Firebase/Auth'
+pod 'Firebase/Auth'
 # pod 'Firebase/Firestore'
 # pod 'Firebase/Analytics'
 # pod 'Firebase/Messaging'
