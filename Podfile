@@ -16,7 +16,7 @@ pod 'Firebase/Firestore'
 
 # pod 'Gallery'
 # pod 'RealmSwift'
-# pod 'ProgressHUD'
+ pod 'ProgressHUD'
 # pod 'SKPhotoBrowser'
 # pod 'MessageKit'
 # pod 'InputBarAccessoryView'
