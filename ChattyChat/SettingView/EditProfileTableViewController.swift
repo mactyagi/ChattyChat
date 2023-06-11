@@ -41,7 +41,11 @@ class EditProfileTableViewController: UITableViewController {
             userNameTextField.text = user.username
             statusLabel.text = user.status
             if user.avatarLink != ""{
-                //set avatar
+                FileStorage.downloadImage(imageURL: user.avatarLink) { image in
+                    DispatchQueue.main.async {
+                        self.avatarImageView.image = image?.circleMasked
+                    }
+                }
             }
         }
     }
@@ -61,6 +65,19 @@ class EditProfileTableViewController: UITableViewController {
         self.present(gallery, animated: true)
     }
     
+    
+    private func uploadAvatarImage(_ image: UIImage){
+        let fileDirectory = "Avatars/" + "_\(User.currentId)" + ".jpg"
+        FileStorage.uploadImage(image, directory: fileDirectory) { documentLink in
+            if var user = User.currentUser{
+                user.avatarLink = documentLink ?? ""
+                saveUserLocally(user)
+                FirebaseUserListner.shared.saveUserToFireStore(user)
+            }
+            // todo Save Image locally
+            FileStorage.saveFileLocally(fileData: image.jpegData(compressionQuality: 1)! as NSData, fileName: User.currentId)
+        }
+    }
 }
 
 
@@ -78,7 +95,9 @@ extension EditProfileTableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // show status view
+        if indexPath == IndexPath(row: 0, section: 1){
+            performSegue(withIdentifier: "editProfileToStatusSeg", sender: self)
+        }
     }
 }
 
@@ -105,8 +124,10 @@ extension EditProfileTableViewController: GalleryControllerDelegate{
         if let image = images.first{
             image.resolve { avatarImage in
                 //TODO: - upload image
+                
                 if let image = avatarImage{
-                    self.avatarImageView.image = image
+                    self.uploadAvatarImage(image)
+                    self.avatarImageView.image = image.circleMasked
                 }else{
                     ProgressHUD.showError("couldn't select image")
                 }

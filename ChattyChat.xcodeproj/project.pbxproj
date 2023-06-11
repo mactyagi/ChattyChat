@@ -22,6 +22,13 @@
 		32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */; };
 		32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */; };
 		32DC2E962A350F9B00BB255F /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E952A350F9B00BB255F /* FileStorage.swift */; };
+		32DC2E982A351AF300BB255F /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E972A351AF300BB255F /* GlobalFunctions.swift */; };
+		32DC2E9A2A359EB300BB255F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E992A359EB300BB255F /* Extension.swift */; };
+		32DC2E9C2A35A38C00BB255F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E9B2A35A38C00BB255F /* Status.swift */; };
+		32DC2E9E2A35A6D200BB255F /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E9D2A35A6D200BB255F /* StatusTableViewController.swift */; };
+		32DC2EA02A35B3BE00BB255F /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2E9F2A35B3BE00BB255F /* UserTableViewCell.swift */; };
+		32DC2EA22A35B3CF00BB255F /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EA12A35B3CF00BB255F /* UsersTableViewController.swift */; };
+		32DC2EA82A35C67D00BB255F /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EA72A35C67D00BB255F /* ProfileTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +48,13 @@
 		32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		32DC2E952A350F9B00BB255F /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		32DC2E972A351AF300BB255F /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		32DC2E992A359EB300BB255F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		32DC2E9B2A35A38C00BB255F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		32DC2E9D2A35A6D200BB255F /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
+		32DC2E9F2A35B3BE00BB255F /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		32DC2EA12A35B3CF00BB255F /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		32DC2EA72A35C67D00BB255F /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.release.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.release.xcconfig"; sourceTree = "<group>"; };
 		760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.debug.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,9 +103,11 @@
 			children = (
 				321660302A34409F00F5BCFF /* AppDelegate.swift */,
 				321660322A34409F00F5BCFF /* SceneDelegate.swift */,
-				321660342A34409F00F5BCFF /* LoginViewController.swift */,
-				32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */,
-				32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */,
+				32DC2EA62A35C66300BB255F /* LoginView */,
+				32DC2EA32A35C62900BB255F /* SettingView */,
+				32DC2EA42A35C63B00BB255F /* CustomViews */,
+				32DC2EA92A35C68300BB255F /* SecondaryViews */,
+				32DC2EA52A35C65100BB255F /* MainView */,
 				32DC2E8F2A34964600BB255F /* Model */,
 				3216604C2A3474E000F5BCFF /* FirebaseHelper */,
 				32DC2E902A34965000BB255F /* Helper */,
@@ -118,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				321660462A346C6A00F5BCFF /* User.swift */,
+				32DC2E9B2A35A38C00BB255F /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,8 +143,52 @@
 			isa = PBXGroup;
 			children = (
 				321660482A3471C700F5BCFF /* Constants.swift */,
+				32DC2E992A359EB300BB255F /* Extension.swift */,
+				32DC2E972A351AF300BB255F /* GlobalFunctions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		32DC2EA32A35C62900BB255F /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2E912A349E1D00BB255F /* SettingsTableViewController.swift */,
+				32DC2E932A34DC8E00BB255F /* EditProfileTableViewController.swift */,
+				32DC2E9D2A35A6D200BB255F /* StatusTableViewController.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		32DC2EA42A35C63B00BB255F /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2E9F2A35B3BE00BB255F /* UserTableViewCell.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		32DC2EA52A35C65100BB255F /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2EA12A35B3CF00BB255F /* UsersTableViewController.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		32DC2EA62A35C66300BB255F /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				321660342A34409F00F5BCFF /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		32DC2EA92A35C68300BB255F /* SecondaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2EA72A35C67D00BB255F /* ProfileTableViewController.swift */,
+			);
+			path = SecondaryViews;
 			sourceTree = "<group>";
 		};
 		873E09A5A23871DEC8E99060 /* Pods */ = {
@@ -255,13 +316,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DC2E982A351AF300BB255F /* GlobalFunctions.swift in Sources */,
 				32DC2E962A350F9B00BB255F /* FileStorage.swift in Sources */,
+				32DC2EA22A35B3CF00BB255F /* UsersTableViewController.swift in Sources */,
 				3216604B2A34737D00F5BCFF /* FCollectionReference.swift in Sources */,
+				32DC2E9A2A359EB300BB255F /* Extension.swift in Sources */,
+				32DC2EA02A35B3BE00BB255F /* UserTableViewCell.swift in Sources */,
 				321660492A3471C700F5BCFF /* Constants.swift in Sources */,
+				32DC2EA82A35C67D00BB255F /* ProfileTableViewController.swift in Sources */,
 				3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */,
 				321660472A346C6A00F5BCFF /* User.swift in Sources */,
 				32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */,
 				32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */,
+				32DC2E9E2A35A6D200BB255F /* StatusTableViewController.swift in Sources */,
+				32DC2E9C2A35A38C00BB255F /* Status.swift in Sources */,
 				321660352A34409F00F5BCFF /* LoginViewController.swift in Sources */,
 				321660312A34409F00F5BCFF /* AppDelegate.swift in Sources */,
 				321660332A34409F00F5BCFF /* SceneDelegate.swift in Sources */,

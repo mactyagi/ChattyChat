@@ -53,6 +53,22 @@ func saveUserLocally(_ user: User){
     }catch{
         print("error saving user locally ", error.localizedDescription)
     }
+}
+
+
+func createDummyUser(){
+    let names = ["manu", "sneh", "mayur", "aakash", "aarav", "punit", "aditya", "uv"]
+    var userIndex = 1
     
-    
+    for i in 0..<5 {
+        let id = UUID().uuidString
+        
+        let fileDirectory = "Avatars/" + "_\(id)" + ".jpg"
+        FileStorage.uploadImage(UIImage(named: "gov")!, directory: fileDirectory) { documentLink in
+            let user = User(id: id, username: names[i], email: "user\(userIndex)@gmail.com", pushId: "", avatarLink: documentLink!, status:"No status")
+            userIndex += 1
+            
+            FirebaseUserListner.shared.saveUserToFireStore(user)
+        }
+    }
 }

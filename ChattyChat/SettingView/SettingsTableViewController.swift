@@ -22,7 +22,7 @@ class SettingsTableViewController: UITableViewController {
     //MARK: - ViewLife Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.tableFooterView = UIView()
+        tableView.sectionHeaderTopPadding = 0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +65,12 @@ class SettingsTableViewController: UITableViewController {
             appVersionLabel.text = "App version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")"
             if user.avatarLink != ""{
                 //  download and set images
+                FileStorage.downloadImage(imageURL: user.avatarLink) { image in
+                    DispatchQueue.main.async {
+                        self.avatarImageView.image = image?.circleMasked
+                    }
+                    
+                }
             }
         }
         
@@ -80,7 +86,7 @@ extension SettingsTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 0 : 1
+        return section == 0 ? 0 : 5
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
