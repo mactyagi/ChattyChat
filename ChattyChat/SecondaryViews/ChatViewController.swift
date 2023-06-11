@@ -6,8 +6,12 @@
 //
 
 import UIKit
-import Mess
-class ChatViewController: UIViewController {
+import MessageKit
+import InputBarAccessoryView
+import Gallery
+import RealmSwift
+
+class ChatViewController: MessagesViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
