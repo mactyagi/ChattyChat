@@ -14,3 +14,7 @@ public let kFILEREFERENCE = "gs://chattychat-86a66.appspot.com"
 
 public let kSTATUS = "status"
 public let kFIRSTRUN = "firstRun"
+
+public let kCHATROOMID = "chatRoomId"
+
+public let kSENDERID = "senderId"
