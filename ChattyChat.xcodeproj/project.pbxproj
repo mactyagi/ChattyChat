@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186058817946E3FD8794C7A5 /* Pods_ChattyChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */; };
+		320C03A52A435B62003CA6D8 /* IncomingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320C03A42A435B62003CA6D8 /* IncomingMessage.swift */; };
 		321660312A34409F00F5BCFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660302A34409F00F5BCFF /* AppDelegate.swift */; };
 		321660332A34409F00F5BCFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660322A34409F00F5BCFF /* SceneDelegate.swift */; };
 		321660352A34409F00F5BCFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321660342A34409F00F5BCFF /* LoginViewController.swift */; };
@@ -35,9 +36,21 @@
 		32DC2EB12A3601DC00BB255F /* FirebaseRecentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EB02A3601DC00BB255F /* FirebaseRecentListener.swift */; };
 		32DC2EB32A36128C00BB255F /* ChatsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EB22A36128C00BB255F /* ChatsTableViewController.swift */; };
 		32DC2EB52A36870100BB255F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EB42A36870100BB255F /* ChatViewController.swift */; };
+		32DC2EB72A3AAD8D00BB255F /* MessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EB62A3AAD8D00BB255F /* MessageDataSource.swift */; };
+		32DC2EBA2A3AADB200BB255F /* MessageCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EB92A3AADB200BB255F /* MessageCellDelegate.swift */; };
+		32DC2EBC2A3AADC800BB255F /* MessageDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EBB2A3AADC800BB255F /* MessageDisplayDelegate.swift */; };
+		32DC2EBE2A3AADD300BB255F /* messageLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EBD2A3AADD300BB255F /* messageLayoutDelegate.swift */; };
+		32DC2EC02A3AADE300BB255F /* InputBarAccessoryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EBF2A3AADE300BB255F /* InputBarAccessoryViewDelegate.swift */; };
+		32DC2EC22A3AAFF400BB255F /* MessageKitDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EC12A3AAFF400BB255F /* MessageKitDefaults.swift */; };
+		32DC2EC42A3AB21100BB255F /* MKMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EC32A3AB21100BB255F /* MKMessage.swift */; };
+		32DC2EC62A3AF26400BB255F /* LocalMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EC52A3AF26400BB255F /* LocalMessage.swift */; };
+		32DC2EC92A3B5A1F00BB255F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2EC82A3B5A1F00BB255F /* RealmManager.swift */; };
+		32DC2ECB2A3B5E0800BB255F /* OutgoingMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DC2ECA2A3B5E0800BB255F /* OutgoingMessage.swift */; };
+		32DFFC602A4202D20026A071 /* FirebaseMessageListner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DFFC5F2A4202D20026A071 /* FirebaseMessageListner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320C03A42A435B62003CA6D8 /* IncomingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessage.swift; sourceTree = "<group>"; };
 		3216602D2A34409F00F5BCFF /* ChattyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChattyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321660302A34409F00F5BCFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		321660322A34409F00F5BCFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +80,17 @@
 		32DC2EB02A3601DC00BB255F /* FirebaseRecentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRecentListener.swift; sourceTree = "<group>"; };
 		32DC2EB22A36128C00BB255F /* ChatsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewController.swift; sourceTree = "<group>"; };
 		32DC2EB42A36870100BB255F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		32DC2EB62A3AAD8D00BB255F /* MessageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDataSource.swift; sourceTree = "<group>"; };
+		32DC2EB92A3AADB200BB255F /* MessageCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellDelegate.swift; sourceTree = "<group>"; };
+		32DC2EBB2A3AADC800BB255F /* MessageDisplayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayDelegate.swift; sourceTree = "<group>"; };
+		32DC2EBD2A3AADD300BB255F /* messageLayoutDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messageLayoutDelegate.swift; sourceTree = "<group>"; };
+		32DC2EBF2A3AADE300BB255F /* InputBarAccessoryViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBarAccessoryViewDelegate.swift; sourceTree = "<group>"; };
+		32DC2EC12A3AAFF400BB255F /* MessageKitDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageKitDefaults.swift; sourceTree = "<group>"; };
+		32DC2EC32A3AB21100BB255F /* MKMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMessage.swift; sourceTree = "<group>"; };
+		32DC2EC52A3AF26400BB255F /* LocalMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMessage.swift; sourceTree = "<group>"; };
+		32DC2EC82A3B5A1F00BB255F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		32DC2ECA2A3B5E0800BB255F /* OutgoingMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessage.swift; sourceTree = "<group>"; };
+		32DFFC5F2A4202D20026A071 /* FirebaseMessageListner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMessageListner.swift; sourceTree = "<group>"; };
 		5B44385E06393AC1C99CBF5F /* Pods-ChattyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.release.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.release.xcconfig"; sourceTree = "<group>"; };
 		760F6845385801FEACBBD126 /* Pods-ChattyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChattyChat.debug.xcconfig"; path = "Target Support Files/Pods-ChattyChat/Pods-ChattyChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A80F02A5D9BF5F122A575F33 /* Pods_ChattyChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChattyChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +162,7 @@
 				3216604A2A34737D00F5BCFF /* FCollectionReference.swift */,
 				32DC2E952A350F9B00BB255F /* FileStorage.swift */,
 				3216604D2A34751A00F5BCFF /* FirebaseUserListners.swift */,
+				32DFFC5F2A4202D20026A071 /* FirebaseMessageListner.swift */,
 				32DC2EB02A3601DC00BB255F /* FirebaseRecentListener.swift */,
 			);
 			path = FirebaseHelper;
@@ -149,6 +174,10 @@
 				321660462A346C6A00F5BCFF /* User.swift */,
 				32DC2E9B2A35A38C00BB255F /* Status.swift */,
 				32DC2EAA2A35D1CF00BB255F /* RecentChat.swift */,
+				32DC2EC32A3AB21100BB255F /* MKMessage.swift */,
+				32DC2ECA2A3B5E0800BB255F /* OutgoingMessage.swift */,
+				320C03A42A435B62003CA6D8 /* IncomingMessage.swift */,
+				32DC2EC72A3AF26D00BB255F /* RealmMessage */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,6 +188,7 @@
 				321660482A3471C700F5BCFF /* Constants.swift */,
 				32DC2EAE2A35FEFB00BB255F /* StartChat.swift */,
 				32DC2E992A359EB300BB255F /* Extension.swift */,
+				32DC2EC12A3AAFF400BB255F /* MessageKitDefaults.swift */,
 				32DC2E972A351AF300BB255F /* GlobalFunctions.swift */,
 			);
 			path = Helper;
@@ -205,8 +235,30 @@
 			children = (
 				32DC2EA72A35C67D00BB255F /* ProfileTableViewController.swift */,
 				32DC2EB42A36870100BB255F /* ChatViewController.swift */,
+				32DC2EB82A3AAD9A00BB255F /* ChatViewExtension */,
 			);
 			path = SecondaryViews;
+			sourceTree = "<group>";
+		};
+		32DC2EB82A3AAD9A00BB255F /* ChatViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2EB62A3AAD8D00BB255F /* MessageDataSource.swift */,
+				32DC2EB92A3AADB200BB255F /* MessageCellDelegate.swift */,
+				32DC2EBB2A3AADC800BB255F /* MessageDisplayDelegate.swift */,
+				32DC2EBD2A3AADD300BB255F /* messageLayoutDelegate.swift */,
+				32DC2EBF2A3AADE300BB255F /* InputBarAccessoryViewDelegate.swift */,
+			);
+			path = ChatViewExtension;
+			sourceTree = "<group>";
+		};
+		32DC2EC72A3AF26D00BB255F /* RealmMessage */ = {
+			isa = PBXGroup;
+			children = (
+				32DC2EC52A3AF26400BB255F /* LocalMessage.swift */,
+				32DC2EC82A3B5A1F00BB255F /* RealmManager.swift */,
+			);
+			path = RealmMessage;
 			sourceTree = "<group>";
 		};
 		873E09A5A23871DEC8E99060 /* Pods */ = {
@@ -335,28 +387,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				32DC2EAB2A35D1CF00BB255F /* RecentChat.swift in Sources */,
+				32DC2EC62A3AF26400BB255F /* LocalMessage.swift in Sources */,
 				32DC2E982A351AF300BB255F /* GlobalFunctions.swift in Sources */,
 				32DC2E962A350F9B00BB255F /* FileStorage.swift in Sources */,
 				32DC2EB12A3601DC00BB255F /* FirebaseRecentListener.swift in Sources */,
 				32DC2EA22A35B3CF00BB255F /* UsersTableViewController.swift in Sources */,
+				32DC2EC02A3AADE300BB255F /* InputBarAccessoryViewDelegate.swift in Sources */,
+				32DC2EC22A3AAFF400BB255F /* MessageKitDefaults.swift in Sources */,
+				32DFFC602A4202D20026A071 /* FirebaseMessageListner.swift in Sources */,
+				32DC2EBA2A3AADB200BB255F /* MessageCellDelegate.swift in Sources */,
 				3216604B2A34737D00F5BCFF /* FCollectionReference.swift in Sources */,
+				32DC2EBE2A3AADD300BB255F /* messageLayoutDelegate.swift in Sources */,
 				32DC2E9A2A359EB300BB255F /* Extension.swift in Sources */,
 				32DC2EA02A35B3BE00BB255F /* UserTableViewCell.swift in Sources */,
 				321660492A3471C700F5BCFF /* Constants.swift in Sources */,
 				32DC2EA82A35C67D00BB255F /* ProfileTableViewController.swift in Sources */,
+				32DC2ECB2A3B5E0800BB255F /* OutgoingMessage.swift in Sources */,
 				3216604E2A34751A00F5BCFF /* FirebaseUserListners.swift in Sources */,
 				321660472A346C6A00F5BCFF /* User.swift in Sources */,
 				32DC2E922A349E1D00BB255F /* SettingsTableViewController.swift in Sources */,
 				32DC2E942A34DC8E00BB255F /* EditProfileTableViewController.swift in Sources */,
+				320C03A52A435B62003CA6D8 /* IncomingMessage.swift in Sources */,
 				32DC2E9E2A35A6D200BB255F /* StatusTableViewController.swift in Sources */,
 				32DC2E9C2A35A38C00BB255F /* Status.swift in Sources */,
 				32DC2EB52A36870100BB255F /* ChatViewController.swift in Sources */,
 				321660352A34409F00F5BCFF /* LoginViewController.swift in Sources */,
+				32DC2EBC2A3AADC800BB255F /* MessageDisplayDelegate.swift in Sources */,
+				32DC2EB72A3AAD8D00BB255F /* MessageDataSource.swift in Sources */,
+				32DC2EC92A3B5A1F00BB255F /* RealmManager.swift in Sources */,
 				32DC2EB32A36128C00BB255F /* ChatsTableViewController.swift in Sources */,
 				32DC2EAF2A35FEFB00BB255F /* StartChat.swift in Sources */,
 				321660312A34409F00F5BCFF /* AppDelegate.swift in Sources */,
 				321660332A34409F00F5BCFF /* SceneDelegate.swift in Sources */,
 				32DC2EAD2A35D57400BB255F /* RecentTableViewCell.swift in Sources */,
+				32DC2EC42A3AB21100BB255F /* MKMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

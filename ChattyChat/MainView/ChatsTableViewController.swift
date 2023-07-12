@@ -52,7 +52,10 @@ class ChatsTableViewController: UITableViewController {
     
     //MARK: - navigation
     func goToChat(recent: RecentChat){
-        
+        restartChat(chatRoomId: recent.chatRoomId, memberIds: recent.memberIds)
+        let vc = ChatViewController(chatId: recent.chatRoomId, recipientId: recent.recieverId, recipientName: recent.recieverName)
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK: - Table view data source

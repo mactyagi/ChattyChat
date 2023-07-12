@@ -47,7 +47,9 @@ class ProfileTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 1{
             let chatId = startChat(user1: User.currentUser!, user2: user!)
-            print("start chatting...")
+            let vc = ChatViewController(chatId: chatId, recipientId: user!.id, recipientName: user!.username)
+            vc.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
