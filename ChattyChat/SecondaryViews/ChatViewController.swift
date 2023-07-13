@@ -13,6 +13,27 @@ import RealmSwift
 
 class ChatViewController: MessagesViewController {
 
+    //MARK: -  Views
+    let leftBarView: UIView = {
+       return UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+    }()
+    
+    let titleLabel: UILabel = {
+       let title = UILabel(frame: CGRect(x: 5, y: 0, width: 140, height: 25))
+        title.textAlignment = .left
+        title.font = .systemFont(ofSize: 16, weight: .medium)
+        title.adjustsFontSizeToFitWidth = true
+        return title
+    }()
+    
+    let subTitleLabel: UILabel = {
+       let subTitle = UILabel(frame: CGRect(x: 5, y: 22, width: 140, height: 25))
+        subTitle.textAlignment = .left
+        subTitle.font = .systemFont(ofSize: 13, weight: .medium)
+        subTitle.adjustsFontSizeToFitWidth = true
+        return subTitle
+    }()
+    
     
     //MARK: -  vars
     private var chatId = ""
@@ -48,6 +69,8 @@ class ChatViewController: MessagesViewController {
         super.viewDidLoad()
         configureMessageInputBar()
         configureMessageCollectionView()
+        configureLeftBarButton()
+        configureCustomTitle()
         loadChats()
         
     }
@@ -81,6 +104,21 @@ class ChatViewController: MessagesViewController {
         messageInputBar.inputTextView.backgroundColor = .systemBackground
         
     }
+    
+    func configureLeftBarButton(){
+        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonPressed))]
+    }
+    
+    
+    func configureCustomTitle(){
+        leftBarView.addSubview(titleLabel)
+        leftBarView.addSubview(subTitleLabel)
+        let leftBarButtonItem = UIBarButtonItem(customView: leftBarView)
+        self.navigationItem.leftBarButtonItems?.append(leftBarButtonItem)
+        titleLabel.text = recipientName
+    }
+    
+    
     
     func loadChats(){
         let predicate = NSPredicate(format: "chatRoomId = %@", chatId)
@@ -118,9 +156,20 @@ class ChatViewController: MessagesViewController {
     
     //MARK: - Actions
     
+    @objc func backButtonPressed(){
+        //TODO remove listners
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
     func messageSend(text: String?, photo: UIImage?, video: String?, audio: String?, location: String?, audioDuration: Float = 0.0){
         print(" sending text", text)
         OutgoingMessage.send(chatId: chatId, text: text, photo: photo, video: video, audio: audio, location: location, memberIds: [User.currentId, recipientId])
+    }
+    
+    
+    //MARK: - update Typing Indicator
+    func updateTypingIndicator(_ show: Bool){
+        self.subTitleLabel.text = show ? "Typing..." : ""
     }
 }
 
