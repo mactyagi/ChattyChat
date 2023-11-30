@@ -72,6 +72,7 @@ class ChatViewController: MessagesViewController {
         configureLeftBarButton()
         configureCustomTitle()
         loadChats()
+        listenForNewChats()
         
     }
     
@@ -99,10 +100,21 @@ class ChatViewController: MessagesViewController {
         
         messageInputBar.setStackViewItems([attachButton], forStack: .left, animated: false)
         messageInputBar.setLeftStackViewWidthConstant(to: 36, animated: false)
+        updateMicButtonStatus(show: true)
         messageInputBar.inputTextView.isImagePasteEnabled = false
         messageInputBar.backgroundView.backgroundColor = .systemBackground
         messageInputBar.inputTextView.backgroundColor = .systemBackground
         
+    }
+    
+    func updateMicButtonStatus(show: Bool){
+        if show{
+            messageInputBar.setStackViewItems([mikeButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 30, animated: false)
+        }else{
+            messageInputBar.setStackViewItems([messageInputBar.sendButton], forStack: .right, animated: false)
+            messageInputBar.setRightStackViewWidthConstant(to: 55, animated: false)
+        }
     }
     
     func configureLeftBarButton(){
@@ -123,6 +135,9 @@ class ChatViewController: MessagesViewController {
     func loadChats(){
         let predicate = NSPredicate(format: "chatRoomId = %@", chatId)
         allLocalMessages = realm.objects(LocalMessage.self).filter(predicate).sorted(byKeyPath: kDATE, ascending: true)
+        if allLocalMessages.isEmpty{
+            checkForOldChats()
+        }
         notificationToken = allLocalMessages.observe({ change in
             switch change{
                 
@@ -142,6 +157,15 @@ class ChatViewController: MessagesViewController {
             }
         })
     }
+    
+    private func listenForNewChats(){
+        FirebaseMessageListner.shared.listenForNewChats(User.currentId, collectionId: chatId, lastMessageDate: lastMessageDate())
+    }
+    
+    private func checkForOldChats(){
+        FirebaseMessageListner.shared.checkForOldChats(User.currentId, collectionId: chatId)
+    }
+    
     
     private func insertMessages(){
         for message in allLocalMessages {
@@ -170,6 +194,12 @@ class ChatViewController: MessagesViewController {
     //MARK: - update Typing Indicator
     func updateTypingIndicator(_ show: Bool){
         self.subTitleLabel.text = show ? "Typing..." : ""
+    }
+    
+    //MARK: - Helpers
+    private func lastMessageDate() -> Date{
+        let lastMessageDate = allLocalMessages.last?.date ?? Date()
+        return Calendar.current.date(byAdding: .second, value: 1, to: lastMessageDate) ?? lastMessageDate
     }
 }
 
